@@ -35,7 +35,7 @@ export async function generateMetadata() {
       description: "Learn more about Samantha and her travel adventures",
       images: [
         signOgImageUrl({
-          title: "Samantha",
+          title: "David X",
           label: "About Me",
           brand: config.blog.name,
         }),

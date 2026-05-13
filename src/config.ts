@@ -1,14 +1,13 @@
 const buildConfig = () => {
-  const blogId = process.env.NEXT_PUBLIC_BLOG_ID;
-  if (!blogId) throw new Error("NEXT_PUBLIC_BLOG_ID is missing");
-  const name = process.env.NEXT_PUBLIC_BLOG_DISPLAY_NAME || "Travel.";
-  const copyright = process.env.NEXT_PUBLIC_BLOG_COPYRIGHT || "Samantha";
+  const blogId = process.env.BLOG_ID || '';
+  const name = process.env.BLOG_DISPLAY_NAME || "Real Estate";
+  const copyright = process.env.BLOG_COPYRIGHT || "David X";
   const defaultTitle =
-    process.env.NEXT_DEFAULT_METADATA_DEFAULT_TITLE || "Travel with Samantha";
-  const defaultDescription = process.env.NEXT_PUBLIC_BLOG_DESCRIPTION || "Blog about travel and lifestyle.";
+    process.env.TITLE || "Properties with David X";
+  const defaultDescription = process.env.BLOG_DESCRIPTION || "Blog about Real Estate";
 
   return {
-    baseUrl: process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
+    baseUrl: process.env.BASE_URL || "http://localhost:3000",
     blog: {
       name,
       copyright,
